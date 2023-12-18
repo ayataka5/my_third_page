@@ -44,17 +44,17 @@
 <p>100 分ってなんだっけ...</p>
 <h2>解法</h2>
 <ol>
-<li>||<a href="https://atcoder.jp/contests/joi2016yo/tasks/joi2016yo_d">Walking in JOI Kingdom</a>||:</li>
+<li>|| <a href="https://atcoder.jp/contests/joi2016yo/tasks/joi2016yo_d">Walking in JOI Kingdom</a> ||:</li>
 </ol>
 <p>向きに対して Run Length 圧縮すると(発散するもの以外) $\infty$ 秒後の位置が確定する。よって、 $\min$ / $\max$ を用いて $T$ 秒後の位置も計算できる。</p>
 <ol start="2">
-<li>||<a href="https://atcoder.jp/contests/joi2016ho/tasks/joi2016ho_a">Oranges</a>||:</li>
+<li>|| <a href="https://atcoder.jp/contests/joi2016ho/tasks/joi2016ho_a">Oranges</a> ||:</li>
 </ol>
 <p>SegmentTree を用いてコストの計算が $O(logN)$ である $O(NMlogN)$ の動的計画法を適用できる。しかし、 1sec に間に合わず TLE 。</p>
 <p>今回要素の更新はないので、「このデータ構造なんだっけ」と思いながら検索すると、 <a href="https://qiita.com/ageprocpp/items/e698e11185762a50e412">kaage 先輩の記事</a> を見つけた。軽くコードを自分の好きなように整形して提出すると AC 。</p>
 <p>想定解法も復習しておこう。</p>
 <ol start="3">
-<li>||<a href="https://atcoder.jp/contests/joi2016ho/tasks/joi2016ho_b">Collecting Stamps 2</a>||:</li>
+<li>|| <a href="https://atcoder.jp/contests/joi2016ho/tasks/joi2016ho_b">Collecting Stamps 2</a> ||:</li>
 </ol>
 <p>J, O, I の店どれを追加するかで場合分け。</p>
 <ul>
@@ -62,7 +62,7 @@
 <p>J の店を追加する場合: 先頭に置くのが一番よく、その時の増加分は全ての O に対してその後ろの I の個数を足したもの。</p>
 </li>
 <li>
-<p>O の店を追加する場合: どこに追加するかの $N$ 通りに対して、$(その前の J の個数)$ $\cdot$ $(その後ろの I の個数)$ の最大。</p>
+<p>O の店を追加する場合:　どこに追加するかの $N$ 通りに対して、$(その前の J の個数)$ $\cdot$ $(その後ろの I の個数)$ の最大。</p>
 </li>
 <li>
 <p>I の店を追加する場合: 後尾に置くのが一番よく、その時の増加分は全ての O に対してその前の J の個数を足したもの。</p>
@@ -70,7 +70,7 @@
 </ul>
 <p>それぞれ $O(N)$ で求まるので、全体としても $O(N)$ 。</p>
 <ol start="4">
-<li>||<a href="https://atcoder.jp/contests/joi2017ho/tasks/joi2017ho_a">Foehn Phenomena</a>||:</li>
+<li>|| <a href="https://atcoder.jp/contests/joi2017ho/tasks/joi2017ho_a">Foehn Phenomena</a> ||:</li>
 </ol>
 <p>区間に対する加算でびっくりするが、高低差の変わる箇所は高々 $2$ 箇所という意味でしかなかった。高低差を随時更新していって、そのたびにスコアも更新していけばよい。 $O(N+Q)$ 。</p>
 <h2>Upsolve</h2>
