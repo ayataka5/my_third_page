@@ -1,0 +1,60 @@
+<h1>JOI 難易度6 #2</h1>
+<p>現時点で AC していない難易度 6 の 5 問を 120 分で何問まで解けるか試してみた。
+QgQ 先輩が並走してくれた。</p>
+<h2>立ち回り</h2>
+<p>実装に時間をかけてるのが課題なので、考察と実装をはっきり分けて、実装に掛かった時間を算出した。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">09:53</td>
+<td style="text-align:left">1 の考察が終わる。</td>
+</tr>
+<tr>
+<td style="text-align:center">23:26</td>
+<td style="text-align:left">1 を <a href="https://atcoder.jp/contests/joi2020ho/submissions/48662856">AC</a> 。</td>
+</tr>
+<tr>
+<td style="text-align:center">36:23</td>
+<td style="text-align:left">2 の考察が終わる。</td>
+</tr>
+<tr>
+<td style="text-align:center">73:28</td>
+<td style="text-align:left">2 で WA 。</td>
+</tr>
+<tr>
+<td style="text-align:center">77:08</td>
+<td style="text-align:left">2 を <a href="https://atcoder.jp/contests/joi2020ho/submissions/48663675">AC</a>。 $K = 1$ でバグらせていた。</td>
+</tr>
+<tr>
+<td style="text-align:center">90:00くらい</td>
+<td style="text-align:left">3 の考察が終わる。焦っててちゃんとメモできていなかった。</td>
+</tr>
+<tr>
+<td style="text-align:center">112:13</td>
+<td style="text-align:left">3 を <a href="https://atcoder.jp/contests/joig2021-open/submissions/48664047">AC</a> 。</td>
+</tr>
+</tbody>
+</table>
+<h2>解法</h2>
+<ol>
+<li>|| <a href="https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_a">Just Long Neckties</a> ||:</li>
+</ol>
+<p>ネクタイ $N$ 個、社員 $N$ 人だったらネクタイの長さと社員のネクタイの長さを両方昇順にして、 $(A_i, B_i)$ でペアにするのが最適。
+使わないものがあっても、ひとつズレるだけなので、ずれてないバージョンとズレたバージョンのコストを計算し、前から / 後ろから累積 $max$ する。</p>
+<ol start="2">
+<li>|| <a href="https://atcoder.jp/contests/joi2020ho/tasks/joi2020ho_b">JJOOII 2</a> ||:</li>
+</ol>
+<p>どの $O$ から始めるか決めたとき、$J$ はその $O$ より前で最も近い $J$ から $K$ 個、 $I$ はその $O$ の後ろで最も近い $I$ から $K$ 個選ぶのが最適。
+尺取り法みたいな感じでコストを計算したが、実装が崩壊した。(し、その必要はなかった。)</p>
+<ol start="3">
+<li>|| <a href="https://atcoder.jp/contests/joig2021-open/tasks/joig2021_d">Exhibition 2</a> ||:</li>
+</ol>
+<p>結局は最小値の最大化。よって二分探索が適用できる。判定に $O(N , log , N)$ くらいかけたので、たぶん $O(N , log^2 , N)$ くらい。</p>
+<h2>Upsolve</h2>
+<p>問題 2 は添え字集合だけで十分である。 <a href="https://atcoder.jp/contests/joi2020ho/submissions/48664360">Code</a> 。</p>
